@@ -67,3 +67,31 @@ void main () {
 }
 */
 
+//17. Operadores Lógicos
+/*
+void main () {
+  int n = 10;
+  int n2 = 13
+  bool r = n <= n2;
+  bool r1 = 10 <=20 && 10 >= 5;
+  bool r2 = 10 <=20 || 10 >= 5;
+
+  // ==
+  // !=
+  // >
+  // <
+  // >=
+  // <=
+
+  /*
+  AND (E/&&)  |   OR (OR/||)
+  F + F = F   |   F + F = F
+  T + F = F   |   T + F = T
+  F + T = F   |   F + T = T
+  T + T = T   |   T + T = T
+  */
+
+  print(!r, r1, r2);
+}
+*/
+
