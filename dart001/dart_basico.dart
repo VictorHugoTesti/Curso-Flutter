@@ -128,3 +128,15 @@ void main () {
 }
 */
 
+//19. Operador Ternário
+/*
+void main() {
+  double nota = 8;
+  String mensagem = nota >= 5 ? 'Aprovado' : 'Reprovado';
+
+  int num = nota == 5 && nota != 7 ? 10: 2;
+
+  print(mensagem, num);
+}
+*/
+
