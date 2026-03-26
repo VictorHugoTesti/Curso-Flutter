@@ -95,3 +95,36 @@ void main () {
 }
 */
 
+//18. If/Else/Else If
+/*
+void main () {
+  double nota = 8.4;
+  double recuperacao = 3.0;
+
+  /*
+  if(nota >= 5.0) {
+    print('Aprovado');
+  } else if (nota >= 3.5) {
+    print("Recuperação");
+    if(recuperacao > = 6.0) {
+      print('Aprovado por Recuperação');
+    } else {
+      print(' Reprovado por Recuperação');
+    }
+  } else {
+    print('Reprovado');
+  }
+  */
+
+  if(nota >= 5.0) {
+    print('Aprovado');
+  } else if (nota >= 3.5 && recuperacao >= 6.0) {
+  print('Aprovado por Recuperação');
+  } else if (nota >= 3.5 && recuperacao < 6.0) {
+    print('Reprovado por Recuperação');
+  } else {
+    print('Reprovado');
+  }
+}
+*/
+
