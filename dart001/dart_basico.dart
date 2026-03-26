@@ -29,3 +29,26 @@ void main () {
   print(name);
 }
 */
+
+//15. Operadores Aritméticos
+/*
+void main () {
+  double n1 = 10.5;
+  double n2 = 45.5;
+  int n3 = 3;
+
+  double r1 = n1 + n2 + n3;
+
+  print(r1)
+
+  n1 += 10;
+  print(n1);
+
+  n3++;
+  print(n3);
+
+  int r2 = n3 % 2;
+  print (r2);
+}
+*/
+
