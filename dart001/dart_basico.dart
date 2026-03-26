@@ -140,3 +140,45 @@ void main() {
 }
 */
 
+//20. Switch
+/*
+void main () {
+  String linguagem = 'dart';
+  /*
+  if(linguagem == 'dart') {
+    print('Legal');
+  } else if (linguagem == 'C') {
+    print('Complicada');
+  } else if(linguagem == 'Swift') {
+    print('Muito Complicada');
+  } else {
+    print('Desconhecida!');
+  }
+  */
+
+  switch(linguagem) {
+    case 'Dart':
+      print('Legal');
+      break;
+    case 'C' :
+      print('Complicada');
+      break;
+    case 'Swift':
+      print('Muito Complicada');
+      break;
+    default:
+      print('Desconhecida!');
+  }
+
+  int n = 10;
+  switch(n) {
+    case 10:
+      print('10');
+      break;
+    case 20:
+      print('Olá');
+      break;
+  }
+}
+*/
+
