@@ -182,3 +182,47 @@ void main () {
 }
 */
 
+//21. While Loop
+/*
+void main () {
+  int i = 0;
+  int j = 100;
+  int k = 75;
+
+  /*
+  print(0);
+  print(1);
+  print(2);
+  print(3);
+  print(4);
+  print(5);
+  */
+
+  while( i <= 100) {
+    print(i);
+    i++;
+  }
+
+  while( j >= 0) {
+    print(i);
+    i--;
+  }
+
+  while( j >= 0 && k > -200) {
+    print(i);
+    print(j);
+    i--;
+    j -= 10;
+  }
+
+  while( j >= 0 || k > -200) {
+    print(i);
+    print(j);
+    i--;
+    j -= 10;
+  }
+
+  print('Fim!');
+}
+*/
+
