@@ -52,3 +52,18 @@ void main () {
 }
 */
 
+// 16. Tomando Decições
+/*
+void main () {
+  int idade = 16;
+
+  if(idade >= 18) {
+    print ("Maior de Idade: ", idade);
+    print('Ola');
+  } else {
+    print ("Menor de Idade: ", idade);
+    print('Tchau');
+  }
+}
+*/
+
