@@ -226,3 +226,18 @@ void main () {
 }
 */
 
+//22. Do While Loop
+/*
+void main () {
+  int i = 10;
+
+  while(i > 10) {
+    print('Não Executa');
+  }
+
+  do {
+  print('Executa 1 Vez Pelo Menos');
+  } while( i > 10);
+}
+*/
+
