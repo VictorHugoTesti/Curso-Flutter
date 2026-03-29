@@ -41,7 +41,7 @@ void main () {
 */
 
 // 27. Variaveis Anuláveis
-
+/*
 void main() {
   saudacoes('victor');
 
@@ -60,3 +60,34 @@ void saudacoes (String nome, {bool mostraragora = true, String? cliente,}) {
     print('Agora: ${agora()}');
   }
 }
+*/
+
+// 28. Conversão Anulável > Não Inválida
+
+void main() {
+  saudacoes('victor', cliente: 'Hugo');
+
+}
+
+void saudacoes (String nome, {bool mostraragora = true, String? cliente,}) {
+
+  print('Saudações do ${nome.toUpperCase()}');
+
+  String c = cliente ?? 'Não Informado';
+
+  print("Seja Bem Vindo ${c.toUpperCase()}!");
+
+  if(cliente != null) {
+      print("Seja Bem Vindo ${cliente.toUpperCase()}!");
+
+  }
+
+  if(mostraragora) {
+    print('Agora: ${agora()}');
+  }
+}
+
+
+
+
+
