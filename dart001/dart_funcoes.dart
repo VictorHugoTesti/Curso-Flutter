@@ -114,7 +114,7 @@ void funcao(
 */
 
 // 30. Funções Anônimas
-
+/*
 void main() {
   saudacoes(
     'victor',
@@ -151,6 +151,25 @@ void saudacoes(
   if (mostraragora) {
     print('Agora: ${agora()}');
   }
+}
+*/
+
+// 31. Retorno de Funções com Nullables
+
+void main () {
+  String nome =  funcao();
+  String nome2 = funcao2(8) ?? 'Não Informado';
+  print(nome2.toUpperCase());
+}
+
+String funcao() => 'Victor'.toUpperCase();
+
+// "String?" permite retornar NULL
+String? funcao2 (int x) {
+  if( x > 10) {
+    return 'Olá mundo!';
+  }
+  return null;
 }
 
 
