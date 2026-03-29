@@ -86,7 +86,7 @@ void saudacoes (String nome, {bool mostraragora = true, String? cliente,}) {
 */
 
 // 29. Resumo sobre Parâmetros
-
+/*
 void main() {
   funcao('Olá', null, e: null, d: 'Teste', c: null);
 }
@@ -111,3 +111,46 @@ void funcao(
   required String? e,
   String f = 'qwe',
 }) {}
+*/
+
+// 30. Funções Anônimas
+
+void main() {
+  saudacoes(
+    'victor',
+    corpo: (funcao),
+    corpo2: (int i) {
+      for (int j = 0; j < i; j++) {
+        print('Olá $j');
+      }
+    },
+  );
+}
+
+void funcao(int i) {
+  for (int j = 0; j < i; j++) {
+    print('Olá $j');
+  }
+}
+
+void saudacoes(
+  String nome, {
+  bool mostraragora = true,
+  String? cliente,
+  required Function(int) corpo,
+  required Function(int) corpo2,
+}) {
+  print('Saudações do ${nome.toUpperCase()}');
+
+  corpo(10);
+
+  String c = cliente ?? 'Não Informado';
+
+  print("Seja Bem Vindo ${c.toUpperCase()}!");
+
+  if (mostraragora) {
+    print('Agora: ${agora()}');
+  }
+}
+
+
