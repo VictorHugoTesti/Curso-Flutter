@@ -1,18 +1,24 @@
 
-// 24. Introdução as Funções
-
 void main() {
-  saudacoes();
+  saudacoes('Victor', sep: '=', mostraragora: false);
+  saudacoes('João', sep: '*');
 
   String a = agora();
   print(a);
   print(agora());
 }
 
-void saudacoes () {
-  print('Saudações do Victor');
+// 24. Introdução as Funções
+
+void saudacoes (String nome, {bool mostraragora = true, String sep = '-'}) {
+
+  print(sep * 20);
+  print('Saudações do $nome');
   print("Seja Bem Vindo!");
-  print('Agora: ${agora()}');
+
+  if(mostraragora) {
+    print('Agora: ${agora()}');
+  }
 }
 
 // 25. Retorno de Funções
@@ -21,3 +27,7 @@ String agora () {
   DateTime agora = DateTime.now();
   return agora.toString();
 }
+
+// 26. Paramêtros de Funções
+
+//Função saudacoes
