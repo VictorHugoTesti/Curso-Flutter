@@ -3,14 +3,21 @@
 
 void main() {
   saudacoes();
+
+  String a = agora();
+  print(a);
+  print(agora());
 }
 
 void saudacoes () {
   print('Saudações do Victor');
   print("Seja Bem Vindo!");
+  print('Agora: ${agora()}');
 }
 
+// 25. Retorno de Funções
 
-//25. Retorno de Funções
-
-void agora () {}
+String agora () {
+  DateTime agora = DateTime.now();
+  return agora.toString();
+}
