@@ -1,4 +1,3 @@
-
 // 24. Introdução as Funções
 
 /*
@@ -23,12 +22,10 @@ void saudacoes (String nome, {bool mostraragora = true, String sep = '-'}) {
 
 // 25. Retorno de Funções
 
-
-String agora () {
+String agora() {
   DateTime agora = DateTime.now();
   return agora.toString();
 }
-
 
 // 26. Paramêtros de Funções
 
@@ -63,7 +60,7 @@ void saudacoes (String nome, {bool mostraragora = true, String? cliente,}) {
 */
 
 // 28. Conversão Anulável > Não Inválida
-
+/*
 void main() {
   saudacoes('victor', cliente: 'Hugo');
 
@@ -86,8 +83,31 @@ void saudacoes (String nome, {bool mostraragora = true, String? cliente,}) {
     print('Agora: ${agora()}');
   }
 }
+*/
 
+// 29. Resumo sobre Parâmetros
 
+void main() {
+  funcao('Olá', null, e: null, d: 'Teste', c: null);
+}
 
+void saudacoes(String nome, {bool mostraragora = true, String? cliente}) {
+  print('Saudações do $nome');
 
+  if (cliente != null) {
+    print("Seja Bem Vindo $cliente!");
+  }
 
+  if (mostraragora) {
+    print('Agora: ${agora()}');
+  }
+}
+
+void funcao(
+  String a,
+  String? b, {
+  String? c,
+  required String d,
+  required String? e,
+  String f = 'qwe',
+}) {}
