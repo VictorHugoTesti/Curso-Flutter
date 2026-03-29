@@ -155,7 +155,7 @@ void saudacoes(
 */
 
 // 31. Retorno de Funções com Nullables
-
+/*
 void main () {
   String nome =  funcao();
   String nome2 = funcao2(8) ?? 'Não Informado';
@@ -171,5 +171,33 @@ String? funcao2 (int x) {
   }
   return null;
 }
+*/
 
+// 32. Escopo
+/*
+//Herança Todas as Variaveis definidas no PAI o Filho tem, POREM as variaveis definidas no filho não tem no PAI
+int a = 0;
 
+void main() {
+  a = 10;
+
+  void funcao() {
+    a = 50;
+
+    int b = 5;
+
+    b = 10;
+
+    void funcao2(int c) {
+      b = 20;
+
+      //Variaveis declaradas dentro do corpo tem preferencia em relação as passadas por parametro
+      int c = 30;
+      print(c);
+    }
+    c = 40;
+  }
+  funcao2();
+  b = 10;
+}
+*/
