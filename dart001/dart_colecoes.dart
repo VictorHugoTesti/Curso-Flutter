@@ -104,7 +104,7 @@ void main() {
 */
 
 //38. Outras Funções da Lista
-
+/*
 void main() {
   //Lista com o Mesmo elemento repetida Varias Vezes (100 = repetições | Victor = item)
   List<String> maluca = List.filled(100, 'Victor'); 
@@ -126,12 +126,26 @@ void main() {
   //Aplciar uma Operação Aritmética a todos os Itens da Lista e Salvar o Rerulsato em outra Lista
   print(doida.map((i) => i + 1));
 }
-
-
+*/
 
 //39. Listas no Null-Safety
 
+void main() {
+  List<String> lista1 = ['Victor', 'Hugo']; //Não Aceita Valores NULLs
+  List<String?> lista11 = ['Victor', 'Hugo', null,]; //Aceita Valores NULLs
 
+  List<String> lista12 = [];  //Pode Adicionar novos Items mesma Vazia
+  lista12.add('Teste'); 
+  List<String>? lista2;   //Pode Iniciar Como NULL
+  if(lista2 != null) {    //Precia de Verificação para saber se a Lista é NULL ou não
+    lista2.add('Teste');
+  }
+
+  List<String?>? lista3; //Pode Começar NULL & Pode aceitar Valores NULL na Lista
+  if(lista3 != null) {
+    lista3.add(null);
+  }
+}
 
 
 //40. Mapas
