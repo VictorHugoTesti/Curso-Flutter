@@ -43,14 +43,8 @@ void main() {
 */
 
 //36. Funções de Listas
-
+/*
 void main() {
-  //List tudo === List<dynamic> tudo
-  List tudo = ['Victor', 'Hugo', 10, 'João', false, 9.99];
-
-  List<String> nomes = ['Victor', 'Hugo', 'João'];
-
-  print(nomes);
 
   List<int> idades = [10, 18, 60];
   List<int> idades2 = []; //Criado uma Lista Vazia
@@ -73,11 +67,40 @@ void main() {
 
   print(idades);  
 }
-
+*/
 
 //37. Iteração da Lista
 
+void main() {
+  List<String> nomes = [
+    'Daniel',
+    'Victor',
+    'Hugo',
+    'Marcos',
+    'Eliane',
+    'Mariane',
+    'Ciolfi',
+  ];
 
+//Printar os items da Lista em MAIUSCULAS
+  //Forma 1
+  for(int i = 2; i < nomes.length -1; i++) {
+    print(nomes[i].toUpperCase());
+  }
+  //Forma 2 *sublist printa os valores dentro do intervalo *RECOMENDADA*
+  for(String nome in nomes.sublist(2, 4)) {
+    print(nome.toUpperCase());
+  }
+  //Forma 3
+  nomes.sublist(1).forEach((nome) {
+    print(nome.toUpperCase());
+  });
+
+
+  print(nomes);
+
+
+}
 
 
 //38. Outras Funções da Lista
