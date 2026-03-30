@@ -242,7 +242,7 @@ void main () {
 */
 
 //42. Mapas no Null-Safety
-
+/*
 void main() {  
   Map<int, String>? ddds2 = {}; //Mapa Vazio
 
@@ -255,16 +255,36 @@ void main() {
     19: 'Campinas',
     41: 'Curitiba',
     50: null,
-  };
-
-  
+  }; 
 }
-
+*/
 
 //43. JSON
-
-
-
+/*
+  //Notação em .json
+{     //Comverte para um MAPA
+    "nome": "Victor",
+    "sobrenome": "Hugo",
+    "idade": 50,
+    "casado": false,
+    "altura": 1.78,
+    "cursos": [     //Converte para uma LISTA
+        {
+          "nome": "Dart",
+          "dificuldade": 1
+        },
+        {
+          "nome": "Flutter",
+          "dificuldade": 2
+        },
+    ],
+    "endereco": {   //Converte para um MAPA
+        "cidade": "Campinas",
+        "país": "Brasil",
+        "numero": 100
+    }
+}
+*/
 
 //44. JSON na Prática
 
