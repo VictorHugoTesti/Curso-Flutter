@@ -185,7 +185,7 @@ void main () {
 */
 
 //41. Funções de Mapas e Null Assertion
-
+/*
 void main () {
   Map<int, String?> ddds = {
     11: 'São Paulo',
@@ -239,11 +239,26 @@ void main () {
 
   print(ddds);
 }
-
+*/
 
 //42. Mapas no Null-Safety
 
+void main() {  
+  Map<int, String>? ddds2 = {}; //Mapa Vazio
 
+  Map<int, String?>? ddds; // Mapa NULL
+
+  if(ddds != null) ddds.remove(11);
+
+   ddds = {
+    11: 'São Paulo',
+    19: 'Campinas',
+    41: 'Curitiba',
+    50: null,
+  };
+
+  
+}
 
 
 //43. JSON
