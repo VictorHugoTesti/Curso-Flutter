@@ -70,7 +70,7 @@ void main() {
 */
 
 //37. Iteração da Lista
-
+/*
 void main() {
   List<String> nomes = [
     'Daniel',
@@ -101,10 +101,31 @@ void main() {
 
 
 }
-
+*/
 
 //38. Outras Funções da Lista
 
+void main() {
+  //Lista com o Mesmo elemento repetida Varias Vezes (100 = repetições | Victor = item)
+  List<String> maluca = List.filled(100, 'Victor'); 
+
+  //Parecido com o Filled, porem pode utilizar operadores de Multiplicação
+  List<int> doida = List.generate(10, (i) => i *10);
+  
+  print(doida.isEmpty);     //Retorna um BOOL para saber se a Lista está Vazia ou Não
+  print(doida.isNotEmpty);  //Mesma coisa do isEmpty porem com a lógica invertida
+
+  doida.removeAt(0);  
+
+  print(doida.any((i) => i % 20 == 0));   //Faz uma Verificação nos Itens da Lista
+
+  print(doida.firstWhere((i) => i % 40 == 0));  //Primeiro item do Resultado da condição (Item = 40)
+  print(doida.lastWhere((i) => i % 40 == 0));   //Ultimo item do Resultado da condição (Item = 80)
+  print(doida.where((i) => i % 40 == 0));       //Retorna todos os Resultados da condição (Itens = 40, 80)
+
+  //Aplciar uma Operação Aritmética a todos os Itens da Lista e Salvar o Rerulsato em outra Lista
+  print(doida.map((i) => i + 1));
+}
 
 
 
