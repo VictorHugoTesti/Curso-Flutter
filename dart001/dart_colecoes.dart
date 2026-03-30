@@ -1,6 +1,6 @@
 
 //33. Variáveis Dinâmicas
-
+/*
 void main() {
   //var adota um tipo especifico e não é possivel mudar
   var nome = 'Victor';
@@ -21,11 +21,25 @@ void main() {
 }
 
 void funcao(num numero) {}
-
+*/
 
 //34. Listas
 
+void main() {
+  //List tudo === List<dynamic> tudo
+  List tudo = ['Victor', 'Hugo', 10, 'João', false, 9.99];
 
+  List<String> nomes = ['Victor', 'Hugo', 'João'];
+
+  print(nomes);
+
+  List<int> idades = [10, 18, 60];
+
+  print(idades.length); // QTTD total de itens dentro da lista
+  print(idades.first);  // PRIMEIRO item da lista
+  print(idades.last);   // ULTIMO item da lista
+  print(idades[0]);     // POSIÇÃO ESPECIFICA dentro da Lista (*COMEÇA NO 0)
+}
 
 
 //35. Leitura da Documentação
