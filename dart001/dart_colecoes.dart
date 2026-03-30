@@ -24,7 +24,7 @@ void funcao(num numero) {}
 */
 
 //34. Listas
-
+/*
 void main() {
   //List tudo === List<dynamic> tudo
   List tudo = ['Victor', 'Hugo', 10, 'João', false, 9.99];
@@ -40,16 +40,39 @@ void main() {
   print(idades.last);   // ULTIMO item da lista
   print(idades[0]);     // POSIÇÃO ESPECIFICA dentro da Lista (*COMEÇA NO 0)
 }
-
-
-//35. Leitura da Documentação
-
-
-
+*/
 
 //36. Funções de Listas
 
+void main() {
+  //List tudo === List<dynamic> tudo
+  List tudo = ['Victor', 'Hugo', 10, 'João', false, 9.99];
 
+  List<String> nomes = ['Victor', 'Hugo', 'João'];
+
+  print(nomes);
+
+  List<int> idades = [10, 18, 60];
+  List<int> idades2 = []; //Criado uma Lista Vazia
+
+  idades.add(4);    //Adiciona um item no Final da Lista
+
+  List<int> outrasIdade = [40, 500, 1000];
+
+  idades.addAll(outrasIdade);   //Adiciona mais de 1 item de uma unica Vez no Final Lista
+  idades.addAll([41, 501, 1001]);
+  idades.insert(0, -2);  //Adiciona o item na posição em que quiser (1° posicao = posição & 2° posicao = valor)
+  
+  print(idades.contains(50));   //Verifica se um valor existe dentro da Lista, que retorna um BOOL (True/False)
+  print(idades.indexOf(18));    //Retorna em qual posição da Lista está o Valor Inserido
+  print(idades.remove(500));    //Remove o valor da Lista (Retorna False caso não encontre o Valor)   
+  print(idades.removeAt(5));    //Remove por posição, Ou seja, ele removeu o item que estava na posição 5 e retorna o Número removido (41)
+
+  idades.shuffle();   //Embaralha os Itens da Lista Aleatóriamente
+  idades.clear();     //Limpa e Remove TODOS os itens da Lista
+
+  print(idades);  
+}
 
 
 //37. Iteração da Lista
