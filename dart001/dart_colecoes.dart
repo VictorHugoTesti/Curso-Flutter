@@ -129,7 +129,7 @@ void main() {
 */
 
 //39. Listas no Null-Safety
-
+/*
 void main() {
   List<String> lista1 = ['Victor', 'Hugo']; //Não Aceita Valores NULLs
   List<String?> lista11 = ['Victor', 'Hugo', null,]; //Aceita Valores NULLs
@@ -146,11 +146,42 @@ void main() {
     lista3.add(null);
   }
 }
-
+*/
 
 //40. Mapas
 
+void main () {
+  Map<int, String?> ddds = {
+    11: 'São Paulo',
+    19: 'Campinas',
+    41: 'Curitiba',
+    49: null,
+    50: 'São Paulo',
+  };
 
+  String? cidade = ddds[11];
+  print(cidade);
+
+  print(ddds.length);
+
+  //Adiciona Novo Item
+  ddds[62] = 'Brasilia';
+
+  //Trocos os itens
+  ddds[11] = 'Brasilia';
+
+  //Remove um item
+  ddds.remove(49);
+
+  print(ddds.values);    //Retorna apenas os Valores (Nesse Caso as String)
+  print(ddds.keys);      //Retorna apenas as Chaves (Nesse Caso os Int)
+
+  print(ddds.containsKey(11));            //Verifica se existe alguma chave em especifica
+  print(ddds.containsValue('Brasilia'));  //Verifica se existe algum Valor em especifico
+
+  print(ddds.isEmpty);    //Verifica se está Vazia
+  print(ddds.isNotEmpty); //Verifica se NÃO está Vazia
+}
 
 
 //41. Funções de Mapas e Null Assertion
