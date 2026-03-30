@@ -1,4 +1,3 @@
-
 //33. Variáveis Dinâmicas
 /*
 void main() {
@@ -287,6 +286,39 @@ void main() {
 */
 
 //44. JSON na Prática
+/*
+import 'dart:convert';
 
+void main() {
+  Map<String, dynamic> dados = json.decode(dadosUsuario());
+  print(dados['cursos'] [0] ['dificuldade']);
+}
 
-
+String dadosUsuario() {
+  //String Com mais de 1 Linha """
+  return """  
+    {
+      "nome": "Victor",
+      "sobrenome": "Hugo",
+      "idade": 50,
+      "casado": false,
+      "altura": 1.78,
+      "cursos": [     //Converte para uma LISTA
+        {
+          "nome": "Dart",
+          "dificuldade": 1
+        },
+        {
+          "nome": "Flutter",
+          "dificuldade": 2
+        },
+      ],
+      "endereco": {   //Converte para um MAPA
+        "cidade": "Campinas",
+        "país": "Brasil",
+        "numero": 100
+      }
+    }
+""";
+}
+*/
