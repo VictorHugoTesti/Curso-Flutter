@@ -149,7 +149,7 @@ void main() {
 */
 
 //40. Mapas
-
+/*
 void main () {
   Map<int, String?> ddds = {
     11: 'São Paulo',
@@ -182,11 +182,63 @@ void main () {
   print(ddds.isEmpty);    //Verifica se está Vazia
   print(ddds.isNotEmpty); //Verifica se NÃO está Vazia
 }
-
+*/
 
 //41. Funções de Mapas e Null Assertion
 
+void main () {
+  Map<int, String?> ddds = {
+    11: 'São Paulo',
+    19: 'Campinas',
+    41: 'Curitiba',
+    49: null,
+    50: 'São Paulo',
+  };
 
+
+  print(ddds.length);
+
+  //Adiciona Novo Item
+  ddds[62] = 'Brasilia';
+
+  //Trocos os itens
+  ddds[11] = 'Brasilia';
+
+  //Remove um item
+  ddds.remove(49);
+
+  print(ddds.values);    //Retorna apenas os Valores (Nesse Caso as String)
+  print(ddds.keys);      //Retorna apenas as Chaves (Nesse Caso os Int)
+
+  print(ddds.containsKey(11));            //Verifica se existe alguma chave em especifica
+  print(ddds.containsValue('Brasilia'));  //Verifica se existe algum Valor em especifico
+
+  print(ddds.isEmpty);    //Verifica se está Vazia
+  print(ddds.isNotEmpty); //Verifica se NÃO está Vazia
+
+  // ---------------------------------------- //
+
+  ddds.forEach((key, value) {
+    print('Key: $key Value: $value');
+  });   
+
+  ddds.clear();   //Remove todos os Itens do Mapa
+
+  //Adiciona todos os Itens de um 2 mapa para dentro do Mapra 'ddds'
+  ddds.addAll({90: 'Cidade Legal', 91: 'Cidade Chata'});  
+
+  ddds.removeWhere((key, value) => key > 20);  //Remove Multiplos itens especificos
+
+  //Null Assertion 
+
+  //String cidade = ddds[13] ?? 'Não Informado';
+  //String? cidade = ddds[13];
+    //if(cidade != null) print(cidade.toUpperCase());
+  String cidade = ddds[13]!; //Utilizado apenas quanto temos Certeza que o Valor (13) não for NULL
+  print(cidade.toUpperCase());
+
+  print(ddds);
+}
 
 
 //42. Mapas no Null-Safety
