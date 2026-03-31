@@ -69,7 +69,7 @@ void main() {
 */
 
 //48. Final x Const
-
+/*
   //Const -> especificado em Tempo de COMPILAÇÃO
   //Final -> especificado em Tempo de EXECUÇÃO
 
@@ -90,10 +90,26 @@ void main() {
   }
   sobrenome = 'teste';
 }
-
+*/
 
 //49. Operadores Cascata
 
+void main() {
+  List<String> nomes = [];
 
+  //Retorna o Objeto 'nomes' em uma Nova Lista, permitindo fazer mais de uma Função de uma vez
+  List<String> mod = nomes
+    ..add('Daniel')
+    ..add('Hugo')
+    ..remove('Daniel');
+  print(mod);
+}
+
+List<String> funcao(List<String> lista) {
+  return lista
+    ..add('Daniel')
+    ..add('Hugo')
+    ..remove('Daniel');
+}
 
 //50. Finalização
