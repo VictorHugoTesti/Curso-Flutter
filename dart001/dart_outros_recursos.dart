@@ -1,5 +1,5 @@
 //45. Exeções e Tentativa/Captura
-
+/*
 void main() {
   try {
     int result = 100 ~/ 0;
@@ -19,12 +19,32 @@ void main() {
     print('FINAL');
   }
 }
-
-
-
+*/
 
 //46. Exeções Personalizadas
 
+void main() {
+  try {
+    funcao(10);
+  } on IssoEstaErrado {
+    print('Errado!!');
+  } catch (e) {
+    print(e);
+  }
+}
+
+void funcao(int x) {
+  if (x <= 0) {
+    throw IssoEstaErrado();
+  }
+  print(x);
+}
+
+class IssoEstaErrado implements Exception {
+  String toString() {
+    return 'Voce não pode passar valor Menor ou Igual que 0';
+  }
+}
 
 
 //47. Enumeradores
