@@ -48,7 +48,7 @@ class IssoEstaErrado implements Exception {
 */
 
 //47. Enumeradores
-
+/*
 enum StatusPagamento { pendente, pago, reenbolsado }
 
 void main() {
@@ -66,9 +66,30 @@ void main() {
   print(numStatus);
   print(StatusPagamento.values[numStatus]);
 }
-
+*/
 
 //48. Final x Const
+
+  //Const -> especificado em Tempo de COMPILAÇÃO
+  //Final -> especificado em Tempo de EXECUÇÃO
+
+void main() {
+  const String nome = 'Daniel';
+  //nome = 'hugo';  //Não pode modificar valores CONST
+  const idade = 10 + 30;
+  const List<String> lista = ['Vitor', 'Hugo'];
+  //lista.add('value');
+
+  final DateTime data = DateTime.now();
+  //agora = DateTime.now();  //Não pode modificar valores FINAL
+  final String sobrenome;
+  if(nome == 'Victor') {
+    sobrenome = 'Ciolfi';
+  } else {
+    sobrenome = 'Not Found';
+  }
+  sobrenome = 'teste';
+}
 
 
 //49. Operadores Cascata
