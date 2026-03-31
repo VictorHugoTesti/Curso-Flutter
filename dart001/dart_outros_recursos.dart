@@ -22,7 +22,7 @@ void main() {
 */
 
 //46. Exeções Personalizadas
-
+/*
 void main() {
   try {
     funcao(10);
@@ -45,11 +45,27 @@ class IssoEstaErrado implements Exception {
     return 'Voce não pode passar valor Menor ou Igual que 0';
   }
 }
-
+*/
 
 //47. Enumeradores
 
+enum StatusPagamento { pendente, pago, reenbolsado }
 
+void main() {
+  StatusPagamento status = StatusPagamento.pago;
+  switch (status) {
+    case StatusPagamento.pendente:
+      break;
+    case StatusPagamento.pago:
+      break;
+    case StatusPagamento.reenbolsado:
+      break;
+  }
+
+  int numStatus = status.index;
+  print(numStatus);
+  print(StatusPagamento.values[numStatus]);
+}
 
 
 //48. Final x Const
