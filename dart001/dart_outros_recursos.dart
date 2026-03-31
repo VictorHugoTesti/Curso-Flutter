@@ -93,7 +93,7 @@ void main() {
 */
 
 //49. Operadores Cascata
-
+/*
 void main() {
   List<String> nomes = [];
 
@@ -111,5 +111,4 @@ List<String> funcao(List<String> lista) {
     ..add('Hugo')
     ..remove('Daniel');
 }
-
-//50. Finalização
+*/
