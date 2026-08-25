@@ -266,7 +266,7 @@ class Pessoa {
 */
 
 //56. Modificador Static
-
+/*
 void main() {
   Pessoa.alturaPadrao = 1.80;
 
@@ -302,9 +302,47 @@ class Pessoa {
 
   static double alturaPadrao = 0;
 }
-
+*/
 
 //57. Modificador Late
 
+void main() {
+  Pessoa pessoa1 = Pessoa(nome: 'Victor', idade: 20);
+  pessoa1.cpf = '123.456.789-00';
+
+  print(pessoa1.cpf);
+  print(pessoa1.temperatura);
+}
+
+class Pessoa {
+  Pessoa({required this.nome, required this.idade});
+
+  String nome;
+  int idade;
+
+  late String cpf;
+
+  late double temperatura = medirTemperatura();
+
+  double medirTemperatura() {
+    print('Temperatura Medida');
+    return 37.0;
+  }
+}
 
 //58. Operador ?.
+/*
+  void main() {
+  Pessoa pessoa1 = Pessoa(nome: 'Victor', idade: 20);
+
+}
+
+class Pessoa {
+  Pessoa({required this.nome, required this.idade});
+
+  String nome;
+  int idade;
+
+}
+*/
+//59. Passagem de Referência
