@@ -1,4 +1,5 @@
 //60. Herança
+/*
 void main() {
   Cachorro cachorro1 = Cachorro();
   cachorro1.nome = 'Rex';
@@ -42,9 +43,58 @@ class Gato extends Animal {
     print('Miaauuuu');
   }
 }
-
+*/
 
 //61. Vantagens da Herança
 
+void main() {
+  Cachorro cachorro1 = Cachorro();
 
-//62.
+  Gato gato1 = Gato();
+
+  List<Animal> animais = [];
+  animais.add(cachorro1);
+  animais.add(gato1);
+
+  Animal animal1 = funcao();
+  if (animal1 is Cachorro)
+    animal1.latir();
+  else if (animal1 is Gato)
+    animal1.Miar();
+}
+
+Animal funcao() {
+  return Cachorro();
+}
+
+class Animal {
+  String? nome;
+  int? idade;
+
+  void comer() {
+    print('Comer');
+  }
+
+  void dormir() {
+    print('Dormir');
+  }
+}
+
+class Cachorro extends Animal {
+  void latir() {
+    print('Auauauua');
+  }
+}
+
+class Gato extends Animal {
+  int vidas = 7;
+
+  void Miar() {
+    print('Miaauuuu');
+  }
+}
+
+//62. Reescrita de Métodos
+
+
+//63. Keyword Super
