@@ -140,6 +140,56 @@ class Pessoa {
 
 //54. Getters e Setters
 
+void main() {
+  Pessoa pessoa1 = Pessoa(nome: 'Victor', idade: 20);
+  Pessoa pessoa2 = Pessoa(nome: 'Hugo', idade: 30, casado: true);
+
+  pessoa1.dinheiro = 300;
+  pessoa2.dinheiro = 1000000000;
+
+  print(pessoa1.dinheiro);
+  print(pessoa2.dinheiro);
+}
+
+class Pessoa {
+  Pessoa({required this.nome, required this.idade, this.casado=false}) {
+    print('Criando o $nome com idade $idade');
+  }
+
+  String nome;
+  int idade;
+  bool casado;
+
+  double? _dinheiro;
+
+  int aniversario() {
+    print('Parabéns! $nome');
+    idade++;
+
+    return idade;
+  }
+
+  void casar() {
+    casado = true;
+  }
+
+  void alterarNome(String n) {
+    nome = n;
+  }
+
+  set dinheiro(double? valor) {
+    if(valor != null && valor >= 0 && valor < 1000000) {
+      print("Alteração no Saldo de $nome");
+    _dinheiro = valor;
+    }    
+  }
+
+  double? get dinheiro {
+    print('Lendo Dinheiro de $nome');
+    return _dinheiro;
+  }
+}
+
 
 //55. Atributos Nullbale
 
