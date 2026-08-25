@@ -332,7 +332,7 @@ class Pessoa {
 */
 
 //58. Operador ?.
-
+/*
 void main() {
   Pessoa pessoa1 = Pessoa(nome: 'Victor', idade: 20);
   print(pessoa1.nome);
@@ -357,13 +357,33 @@ class Pessoa {
     print('Comendo...');
   }
 }
+*/
 
 //59. Passagem de Referência
 
-/*
-  void main() {
+void main() {
   Pessoa pessoa1 = Pessoa(nome: 'Victor', idade: 20);
+  print(pessoa1.nome);
+  print(pessoa1.idade);
 
+  Pessoa pessoa2 = pessoa1;
+  print(pessoa2.nome);
+  print(pessoa2.idade);
+
+  // funcao(pessoa1);
+  // print(pessoa1.idade);
+
+  int num = 10;
+  funcao(num);
+  print(num);
+}
+
+// void funcao(Pessoa pessoa) {
+//   pessoa.idade++;
+// }
+
+void funcao(int X) {
+  X = 20;
 }
 
 class Pessoa {
@@ -371,6 +391,4 @@ class Pessoa {
 
   String nome;
   int idade;
-
 }
-*/
