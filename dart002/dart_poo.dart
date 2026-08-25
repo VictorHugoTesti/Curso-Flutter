@@ -139,7 +139,7 @@ class Pessoa {
 */
 
 //54. Getters e Setters
-
+/*
 void main() {
   Pessoa pessoa1 = Pessoa(nome: 'Victor', idade: 20);
   Pessoa pessoa2 = Pessoa(nome: 'Hugo', idade: 30, casado: true);
@@ -189,10 +189,81 @@ class Pessoa {
     return _dinheiro;
   }
 }
+*/
+
+//55. Atributos Nullable
 
 
-//55. Atributos Nullbale
+void main() {
+  Pessoa pessoa1 = Pessoa(nome: 'Victor', idade: 20);
+  Pessoa pessoa2 = Pessoa(nome: 'Hugo', idade: 30, casado: true);
 
+  pessoa1.dinheiro = 300;
+  pessoa2.dinheiro = 1000000000;
+
+  if(pessoa1.dinheiro > 150) {
+    print(pessoa1.dinheiro);
+  }
+
+  String? nome = pessoa1.nomeSecreto;
+  if(nome != null) print(nome.toUpperCase());
+  
+  if(pessoa1.atributo != null) print(pessoa1.atributo!.toUpperCase());
+}
+
+class Pessoa {
+  Pessoa({required this.nome, required this.idade, this.casado=false}) {
+    print('Criando o $nome com idade $idade');
+  }
+
+  String nome;
+  int idade;
+  bool casado;
+
+  double _dinheiro = 0;
+
+  String? _nomeSecreto = 'Flutter';
+
+  get nomeSecreto {
+    String? nome = nomeSecreto;
+    if(nome != null) {
+      _nomeSecreto = null;
+      return nome;
+    } else {
+      return null;
+    }
+  }
+
+  String? atributo = 'Ola';
+
+  int aniversario() {
+    print('Parabéns! $nome');
+    idade++;
+
+    return idade;
+  }
+
+  void casar() {
+    casado = true;
+  }
+
+  void alterarNome(String n) {
+    nome = n;
+  }
+
+  set dinheiro(double valor) {
+    if(valor >= 0 && valor < 1000000) {
+      print("Alteração no Saldo de $nome");
+    _dinheiro = valor;
+    }    
+  }
+
+  double get dinheiro {
+    print('Lendo Dinheiro de $nome');
+    _dinheiro -= 100;
+    return _dinheiro;
+  }
+}
 
 //56. Modificador Static
 
