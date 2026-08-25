@@ -305,7 +305,7 @@ class Pessoa {
 */
 
 //57. Modificador Late
-
+/*
 void main() {
   Pessoa pessoa1 = Pessoa(nome: 'Victor', idade: 20);
   pessoa1.cpf = '123.456.789-00';
@@ -329,8 +329,37 @@ class Pessoa {
     return 37.0;
   }
 }
+*/
 
 //58. Operador ?.
+
+void main() {
+  Pessoa pessoa1 = Pessoa(nome: 'Victor', idade: 20);
+  print(pessoa1.nome);
+  print(pessoa1.idade);
+
+  Pessoa? pessoa2;
+  print(pessoa2?.nome.toUpperCase());
+  print(pessoa2?.idade);
+  print(pessoa2?.cidade?.toUpperCase());
+  pessoa2?.comer();
+}
+
+class Pessoa {
+  Pessoa({required this.nome, required this.idade});
+
+  String nome;
+  int idade;
+
+  String? cidade;
+
+  void comer() {
+    print('Comendo...');
+  }
+}
+
+//59. Passagem de Referência
+
 /*
   void main() {
   Pessoa pessoa1 = Pessoa(nome: 'Victor', idade: 20);
@@ -345,4 +374,3 @@ class Pessoa {
 
 }
 */
-//59. Passagem de Referência
