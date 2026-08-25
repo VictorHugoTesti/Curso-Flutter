@@ -192,8 +192,7 @@ class Pessoa {
 */
 
 //55. Atributos Nullable
-
-
+/*
 void main() {
   Pessoa pessoa1 = Pessoa(nome: 'Victor', idade: 20);
   Pessoa pessoa2 = Pessoa(nome: 'Hugo', idade: 30, casado: true);
@@ -264,8 +263,45 @@ class Pessoa {
     return _dinheiro;
   }
 }
+*/
 
 //56. Modificador Static
+
+void main() {
+  Pessoa.alturaPadrao = 1.80;
+
+  Pessoa pessoa1 = Pessoa(nome: 'Victor', idade: 20);
+  pessoa1.nome;
+  pessoa1.idade;
+
+  print(pessoa1.altura);
+
+  Pessoa.atributoStatic = ', Victor';
+  print(Pessoa.atributoStatic);
+
+  print(Pessoa.metodoStatic());
+}
+
+class Pessoa {
+  Pessoa({required this.nome, required this.idade});
+
+  String nome;
+  int idade;
+
+  double altura = alturaPadrao;
+
+  void comer() {
+    print('comendo...');
+  }
+
+  static String atributoStatic = 'abc';
+
+  static String metodoStatic() {
+    return 'Olá Mundo $atributoStatic';
+  }
+
+  static double alturaPadrao = 0;
+}
 
 
 //57. Modificador Late
