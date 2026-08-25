@@ -168,7 +168,7 @@ class Gato extends Animal {
 */
 
 //63. Keyword Super
-
+/*
 void main() {
   Cachorro cachorro1 = Cachorro('Rex', 5);
   cachorro1.comer();
@@ -241,10 +241,89 @@ class Gato extends Animal {
     return 'Gato: $nome Idade: $idade';
   }
 }
-
+*/
 
 //64. Operador Cast
 
+void main() {
+  Cachorro cachorro1 = Cachorro('Rex', 5);
+  cachorro1.comer();
+  cachorro1.dormir();
+  cachorro1.latir();
+
+  print(cachorro1);
+
+  Gato gato1 = Gato('Fiote', 8);
+  gato1.vidas--;
+  gato1.comer();
+  gato1.dormir();
+  gato1.Miar();
+
+  print(gato1);
+
+  Cachorro animal1 = funcao() as Cachorro;
+  animal1.latir();
+}
+
+Animal funcao() {
+  return Cachorro('Dog', 2);
+}
+
+class Animal {
+  Animal(this.nome, this.idade) {
+    print('Adicionado: $nome');
+  }
+
+  String nome;
+  int idade;
+
+  void comer() {
+    print('Comer');
+  }
+
+  void dormir() {
+    print('Dormir');
+  }
+
+  @override
+  String toString() {
+    return 'Nome: $nome Idade: $idade';
+  }
+}
+
+class Cachorro extends Animal {
+  Cachorro(String nome, int idade) : super(nome, idade);
+
+  void latir() {
+    print('Au Au');
+  }
+
+  @override
+  void dormir() {
+    super.dormir();
+    print('Roncando');
+  }
+
+  @override
+  String toString() {
+    return 'Cahorro: $nome Idade: $idade';
+  }
+}
+
+class Gato extends Animal {
+  Gato(String nome, int idade) : super(nome, idade);
+
+  int vidas = 7;
+
+  void Miar() {
+    print('Miaauuuu');
+  }
+
+  @override
+  String toString() {
+    return 'Gato: $nome Idade: $idade';
+  }
+}
 
 //65. Classes Abstratas
 
