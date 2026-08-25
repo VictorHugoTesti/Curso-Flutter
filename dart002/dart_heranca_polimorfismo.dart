@@ -327,7 +327,7 @@ class Gato extends Animal {
 */
 
 //65. Classes Abstratas
-
+/*
 void main() {
   Cachorro cachorro1 = Cachorro('Rex', 5);
   cachorro1.comer();
@@ -413,11 +413,68 @@ class Gato extends Animal {
     print('Vidas Restantes: $vidas');
   }
 }
-
+*/
 
 //66. Interfaces
 
+void main() {
+  //RepositorioPessoas repo = RepositorioPessoasRemote();
+  RepositorioPessoas repo = RepositorioPessoasLocal();
+  repo.ler(10);
+  repo.adicionar('Hugo');
+  repo.excluir(5);
+  repo.apagarTodos();
+}
+
+abstract class RepositorioPessoas {
+  String ler(int i);
+  void adicionar(String nome);
+  void excluir(int i);
+  void apagarTodos();
+}
+
+class RepositorioPessoasRemote implements RepositorioPessoas {
+  @override
+  void adicionar(String nome) {
+    // TODO: implement adicionar
+  }
+
+  @override
+  void excluir(int i) {
+    // TODO: implement excluir
+  }
+
+  @override
+  String ler(int i) {
+    return 'Victor';
+  }
+
+  @override
+  void apagarTodos() {
+    // TODO: implement apagarTodos
+  }
+}
+
+class RepositorioPessoasLocal implements RepositorioPessoas {
+  @override
+  void adicionar(String nome) {
+    // TODO: implement adicionar
+  }
+
+  @override
+  void excluir(int i) {
+    // TODO: implement excluir
+  }
+
+  @override
+  String ler(int i) {
+    return 'Hugo';
+  }
+
+  @override
+  void apagarTodos() {
+    // TODO: implement apagarTodos
+  }
+}
 
 //67. Outro Uso para Interfaces
-
-
