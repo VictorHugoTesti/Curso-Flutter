@@ -38,10 +38,14 @@ class TodoListPage extends StatelessWidget {
               ListView(
                 shrinkWrap: true,
                 children: [
-                  Container(color: Colors.red, height: 50),
-                  Container(color: Colors.yellow, height: 50),
-                  Container(color: Colors.green, height: 50),
-                  Container(color: Colors.blue, height: 50),
+                  ListTile(
+                    title: Text('Tarefa 1'),
+                    subtitle: Text('08/27'),
+                    leading: Icon(Icons.save, size: 30,),
+                    onTap: () {
+                      print('Tarefa 1');
+                    },
+                  )
                 ],
               ),
               SizedBox(height: 16),
