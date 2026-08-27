@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
 
-class TodoListPage extends StatelessWidget {
+class TodoListPage extends StatefulWidget {
   const TodoListPage({super.key});
+
+  @override
+  State<TodoListPage> createState() => _TodoListPageState();
+}
+
+class _TodoListPageState extends State<TodoListPage> {
+  final TextEditingController todoController = TextEditingController();
+
+  List<String> todos = [];
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +34,13 @@ class TodoListPage extends StatelessWidget {
                   ),
                   SizedBox(width: 8),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      String text = todoController.text;
+                      setState(() {
+                        todos.add(text);
+                      });
+                      todoController.clear();
+                    },
                     style: ElevatedButton.styleFrom(
                       foregroundColor: Color(0xff00d7f3),
                       padding: EdgeInsets.all(14),
@@ -35,18 +50,19 @@ class TodoListPage extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 16),
-              ListView(
-                shrinkWrap: true,
-                children: [
-                  ListTile(
-                    title: Text('Tarefa 1'),
-                    subtitle: Text('08/27'),
-                    leading: Icon(Icons.save, size: 30,),
-                    onTap: () {
-                      print('Tarefa 1');
-                    },
-                  )
-                ],
+              Flexible(
+                child: ListView(
+                  shrinkWrap: true,
+                  children: [
+                    for (String todo in todos)
+                      ListTile(
+                        title: Text(todo),
+                        onTap: () {
+                          print('Tarefa: $todo');
+                        },
+                      ),
+                  ],
+                ),
               ),
               SizedBox(height: 16),
               Row(
